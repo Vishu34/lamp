@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   body{
+      background-color:black;
+      display:flex;
+   justify-content: center;
+   align-items: center;
+  height: 50vh;
+  overflow: hidden;
+ }
+ 
+ 
+.img1{
+   width:180px;
+   height: 500px;
+}
+.container{
+   display:flex;
+   justify-content:center;
+   align-items: center;
+   flex-direction:row;
+ 
+ 
+  
+ }
+.container2{
+   
+   position: absolute;
+   top:0px;
+   left:300px; 
+}
+.container1{
+  
+   position: absolute;
+   top:0px;
+   left:300px;
+}
+
+#btn1{
+   width: 300px;
+   position:fixed;
+   bottom:120px;
+   left:500px;
+}
+#btn2{
+   width: 300px;
+   position:fixed;
+   bottom:120px;
+   left:500px;
+  
+}
+@media screen and (max-width: 950px){
+   #btn1{
+   width:200px;
+   position:fixed;
+   top: 506px;
+    left:319px;
+}
+#btn2{
+   width:200px;
+   position:fixed;
+   top: 524px;
+    left:319px;
+  
+}
+.img1{
+   width:180px;
+   height:500px;
+}
+.container2{
+   
+   position: absolute;
+   top:108px;
+   left:106px; 
+}
+.container1{
+  
+   position: absolute;
+   top:108px;
+   left:106px;
+}
+ }
+@media screen and (max-width: 850px){
+   #btn1{
+   width:200px;
+   position:fixed;
+   top: 506px;
+    left:319px;
+}
+#btn2{
+   width:200px;
+   position:fixed;
+   top: 524px;
+    left:319px;
+  
+}
+.img1{
+   width:150px;
+   height:500px;
+}
+.container2{
+   
+   position: absolute;
+   top:108px;
+   left:106px; 
+}
+.container1{
+  
+   position: absolute;
+   top:108px;
+   left:106px;
+}
+ }
+@media screen and (max-width: 450px){
+   #btn1{
+   width:200px;
+   position:fixed;
+   top:461px;
+    left: 89px;
+}
+#btn2{
+   width:200px;
+   position:fixed;
+   top:479px;
+    left: 88px;
+  
+}
+.img1{
+   width:70px;
+   height: 400px;
+}
+.container2{
+   
+   position: absolute;
+   top:100px;
+   left:55px; 
+}
+.container1{
+  
+   position: absolute;
+   top:100px;
+   left:55px;
+}
+ }
+</style>
+<body>
+   <h1 id="head">this is the method</h1>
+   <div>
+     
+   
+    <div class="container"><div class="container1"> 
+      <img src="on.jpg" id="img1" class="img1">
+     <img src="on.jpg" id="img2" class="img1">
+     <img src="on.jpg" id="img3" class="img1">
+     
+    
+    
+     <img src="on.jpg" id="img4" class="img1"></div>
+     <div class="container2">
+      
+     <img src="off.jpg" id="img11" class="img1">
+     <img src="off.jpg" id="img22" class="img1">
+      <img src="off.jpg" id="img33" class="img1">
+      <img src="off.jpg" id="img44" class="img1"></div></div>
+
+      <div class="btn">
+      <input type="image" src="on.png" id="btn1" onclick="myfun1()">
+      <input type="image" src="off.png" id="btn2" onclick="myfun()">
+   </div>
+
+   </div>
+   <script>
+        let img1=document.getElementById("img1");
+        let img2=document.getElementById("img2");
+        let img3=document.getElementById("img3");
+        let img4=document.getElementById("img4");
+      
+      let img11=document.getElementById("img11");
+      let img22=document.getElementById("img22");
+      let img33=document.getElementById("img33");
+      let img44=document.getElementById("img44");
+let head=document.getElementById("head");
+
+
+   function myfun(){
+      head.innerHTML="turn on the light";
+      img11.style.visibility="hidden";
+      img22.style.visibility="hidden";
+ img33.style.visibility="hidden";
+img44.style.visibility="hidden";
+document.getElementById("btn2").style.visibility="hidden";
+document.getElementById("btn1").style.visibility="visible";
+      img1.style.visibility="visible";
+      img2.style.visibility="visible";
+      img3.style.visibility="visible";
+      img4.style.visibility="visible";
+
+   }
+   function myfun1(){
+     
+     
+      head.innerHTML="turn off the light";
+      img11.style.visibility="visible";
+      img22.style.visibility="visible";
+      img33.style.visibility="visible";
+      img44.style.visibility="visible";
+      document.getElementById("btn1").style.visibility="hidden";
+      document.getElementById("btn2").style.visibility="visible";
+      
+img1.styl33visibility="hidden";
+img2.styl33visibility="hidden";
+img3.styl33visibility="hidden";
+img4.styl33visibility="hidden";
+   }
+      
+     
+   
+   </script>
+
+</body>
+</html>
